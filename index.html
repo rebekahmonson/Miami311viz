@@ -27,6 +27,13 @@
  
           chart.render();
       }
+
+
+      $('#sidebar').affix({
+  offset: {
+    top: 50
+  }
+});
   </script>
  
     <!-- Le styles -->
@@ -38,16 +45,13 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
     <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 
-<<<<<<< HEAD
-=======
+
     <link rel="stylesheet" href="MarkerCluster.css" />
     <link rel="stylesheet" href="MarkerCluster.Default.css" />
     <script src="leaflet.markercluster-src.js"></script>
     <script src="realworld.388.js"></script>
 
 
->>>>>>> FETCH_HEAD
->>>>>>> FETCH_HEAD
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -70,6 +74,12 @@
 
    <body role="document">
 
+
+     <div class="jumbotron">
+
+      </div>
+
+
     <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -87,19 +97,15 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">All</a></li>
-            <li><a href="#graph">Graph 1</a></li>
-            <li><a href="#contact">Graph 2</a></li>
-            <li><a href="#contact">Graph 3</a></li>
-            <li><a href="#contact">Graph 4</a></li>
-            <li><a href="#contact">Graph 5</a></li>
+            <li><a href="#graph1">Bulk Trash</a></li>
+            <li><a href="#graph2">Green Waste Cart Request</a></li>
+            <li><a href="#graph3">Blue Cart Recycling</a></li>
+            <li><a href="#graph4">Abandoned Dog</a></li>
+            <li><a href="#graph5">Dead / Missing Animal</a></li>
          
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
-     <div class="jumbotron">
-
-      </div>
 
     <div class="container theme-showcase" role="main">
 
@@ -108,34 +114,31 @@
 
     <!-- MAP -->
     <div class="row">
+         <h1>All the graphs</h1> 
     <div id="map" style="width: 100%; height: 300px"></div>
      </div>
 
-      
-       <div class="page-header">
-        <h1>All the graphs</h1>
-      </div>
 
-       <div class="page-header">
-        <h1>Graphs 1</h1>
+       <div class="page-header"> <div id="graph1">
+        <h1>Bulk Trash</h1> </div>
 
          <div id="chartContainer" style="height: 500px;"></div>
       </div> 
 
-       <div class="page-header">
-        <h1>Graphs 2</h1>
+       <div class="page-header"> <div id="graph2">
+        <h1>Green Waste Cart Request</h1> </div>
       </div>
 
-       <div class="page-header">
-        <h1>Graphs 3</h1>
+       <div class="page-header"> <div id="graph3">
+        <h1>Blue Cart Recycling</h1> </div>
       </div>  
 
-        <div class="page-header">
-        <h1>Graphs 4</h1>
+        <div class="page-header"> <div id="graph4">
+        <h1>Abandoned Dog</h1> </div>
       </div>  
-
-      <div class="page-header">
-        <h1>Graphs 5</h1>
+ 
+      <div class="page-header"> <div id="graph5">
+        <h1>Dead / Missing Animal</h1> </div>
       </div> 
   
      
@@ -143,7 +146,7 @@
         <h1>Additional Info</h1>
       </div>
       <div class="well">
-        <p>Have a complaint? Go to this <a href="http://google.com">link </a> to learn how to submit an official complaint.</p>
+        <p>Have a complaint? Go to this <a href="http://www.miamidade.gov/information/311.asp">link </a> to learn how to submit an official complaint.</p>
       </div>
 
 
