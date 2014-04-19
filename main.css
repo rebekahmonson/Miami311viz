@@ -5,4 +5,20 @@ h1{
 
 .chartContainer{
 	margin-right: auto;
+	margin-left: auto
 }
+
+.jumbotron{
+	background-image:url("img/header003.png");
+	height: 258px;
+	margin-right: auto;
+	margin-left: auto;
+ }
+
+ body { 
+ 	padding-top: 70px; }
+
+
+
+
+
