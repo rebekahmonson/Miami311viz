@@ -35,6 +35,7 @@ window.onload = function () {
       }
       ]
     });
+    chart.render();
 
     var chart2 = new CanvasJS.Chart("chart2",
     {
