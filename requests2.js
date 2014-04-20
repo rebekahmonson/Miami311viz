@@ -2,7 +2,7 @@
 //Bulky trash by ZIP
 
 var addressPoints = [
-//format=[lat,lng, "#"],
+//format=[lat,lng, "title"],
 [25.606583,	-80.34859, "33157: 1709 bulk trash requests"],
 [25.734828,	-80.3583, "33165: 1439 bulk trash requests"],
 [25.739011,	-80.30685, "33155: 1379 bulk trash requests"],
