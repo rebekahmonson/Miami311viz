@@ -10,7 +10,7 @@ h1{
 
 .jumbotron{
 	background-image:url("img/header003.png");
-	height: 258px;
+	height: 100%;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: -6px;
