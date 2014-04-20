@@ -1,6 +1,10 @@
 h1{
-	color: #333;
-	font-size: 25px;
+	color: #575757;
+	font-size: 30px;
+	text-align: center;
+	text-transform: capitalize;
+	font-family: 'Abril Fatface', cursive;
+	padding-bottom: 15px;
 }
 
 .chartContainer{
@@ -16,11 +20,20 @@ h1{
 	margin-left: auto;
 	margin-top: -6px;
  }
+
  .jumbotron h1{
  	display: block;
  	font-size: 200%;
  	padding: 5%;
  }
+
+.navbar-brand{
+		font-family: 'Abril Fatface', cursive;
+		color: #FF9933;
+}
+
+
+
 
  body { 
  	padding-top: 70px;
@@ -30,3 +43,24 @@ h1{
  .navbar navbar-inverse navbar-fixed-top{
  	
  }
+
+ #logo{
+ 	background: #FF9933;
+ 	height: 150px;
+ 	width: 235px;
+ 	margin: 0 auto;
+  	color: white;
+ 	font-size: 30px;
+ 	font-style: bold;
+ 	text-align: center;
+ 	padding-right: 5px;
+ 	
+
+  }
+
+  #logo h1{
+  	margin-top: -47px;
+  	padding: 5px;
+  	font-family: 'Abril Fatface', cursive;
+  	font-style: italic;
+  }
