@@ -9,11 +9,16 @@ h1{
 }
 
 .jumbotron{
-	background-image:url("img/header003.png");
+	background-image:url("img/header003notype.png");
 	height: 100%;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: -6px;
+ }
+ .jumbotron h1{
+ 	display: block;
+ 	font-size: 200%;
+ 	padding: 5%;
  }
 
  body { 
