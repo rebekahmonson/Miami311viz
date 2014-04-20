@@ -7,34 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Visualizing 311 data from Miami Dade County.">
     <meta name="author" content="">
-     <script type="text/javascript" src="canvasjs.min.js"></script>
-     <script type="text/javascript">
-      window.onload = function () {
-          var chart = new CanvasJS.Chart("chartContainer", {
-              data: [
-              {
-                  type: "column",
-                  dataPoints: [
-                  { x: 10, y: 10 },
-                  { x: 20, y: 15 },
-                  { x: 30, y: 25 },
-                  { x: 40, y: 30 },
-                  { x: 50, y: 28 }
-                  ]
-              }
-              ]
-          });
- 
-          chart.render();
-      }
-
-
-      $('#sidebar').affix({
-  offset: {
-    top: 50
-  }
-});
-  </script>
+     
  
     <!-- Le styles -->
 
@@ -52,8 +25,11 @@
     <link rel="stylesheet" href="MarkerCluster.css" />
     <link rel="stylesheet" href="MarkerCluster.Default.css" />
     <script src="leaflet.markercluster-src.js"></script>
+    <!-- CanvasJS -->
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+
     <!--data-->
-    <script src="bulktrash.js"></script>
+    <script src="requests.js"></script>
 
 
 
@@ -119,8 +95,8 @@
 
     <!-- MAP -->
     <div class="row">
-         <h1>Bulk trash</h1> 
-         <p> Requests by ZIP code</p>
+         <h1>All requests</h1> 
+         <p> Mapped by ZIP code</p>
     <div id="map" style="width: 100%; height: 300px"></div>
      </div>
 
@@ -164,41 +140,92 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
-    // var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    //     maxZoom: 18,
-    //     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
-    //   }),
-    // latlng = L.latLng(25.7877, -80.2241);
 
-      //pull in stamen layer
-      var baseLayer = new L.StamenTileLayer("toner-lite");
-
-      //create map
-      var map = L.map('map', {
-        center: new L.LatLng(25.7877, -80.2241), 
-        zoom: 11,
-        layers: [baseLayer]
-      });
-
-    //group requests
-    //var requests = L.layerGroup([bulktrash, greenwat, aurora, golden]);
+    //Stamen tiles
+    var baseLayer = new L.StamenTileLayer("toner-lite");
     
-    //var map = L.map('map', {center: latlng, zoom: 10, layers: [baselayer]});
-
-    var markers = L.markerClusterGroup();
-    
-    for (var i = 0; i < addressPoints.length; i++) {
-      var a = addressPoints[i];
+    //Data & markers
+    var bulktrash = L.markerClusterGroup();
+    for (var i = 0; i < bulktrashdata.length; i++) {
+      var a = bulktrashdata[i];
       var title = a[2];
       var marker = L.marker(new L.LatLng(a[0], a[1]), { title: title });
       marker.bindPopup(title);
-      markers.addLayer(marker);
+      markers.addLayer(bulktrash);
     }
 
-    map.addLayer(markers);
+    var greenwaste = L.markerClusterGroup();
+    for (var i = 0; i < greenwastedata.length; i++) {
+      var b = greenwastedata[i];
+      var title = b[2];
+      var marker = L.marker(new L.LatLng(b[0], b[1]), { title: title });
+      marker.bindPopup(title);
+      markers.addLayer(greenwaste);
+    }
+    var recycling = L.markerClusterGroup();
+    for (var i = 0; i < recyclingdata.length; i++) {
+      var c = recyclingwastedata[i];
+      var title = c[2];
+      var marker = L.marker(new L.LatLng(c[0], c[1]), { title: title });
+      marker.bindPopup(title);
+      markers.addLayer(recycling);
+    }
+    var dog = L.markerClusterGroup();
+    for (var i = 0; i < dogdata.length; i++) {
+      var d = dogdata[i];
+      var title = c[2];
+      var marker = L.marker(new L.LatLng(d[0], d[1]), { title: title });
+      marker.bindPopup(title);
+      markers.addLayer(dog);
+    }
+    var animal = L.markerClusterGroup();
+    for (var i = 0; i < dogdata.length; i++) {
+      var e = dogdata[i];
+      var title = e[2];
+      var marker = L.marker(new L.LatLng(e[0], e[1]), { title: title });
+      marker.bindPopup(title);
+      markers.addLayer(animal);
+    }
+
+    //Layer group requests
+    var requests = L.layerGroup([bulktrash, greenwaste, recycling, dog, animal]);
+
+    //create map
+      var map = L.map('map', {
+        center: new L.LatLng(25.7877, -80.2241), 
+        zoom: 11,
+        layers: [baseLayer, requests]
+      });
 
   </script>
 
+     <script type="text/javascript">
+      window.onload = function () {
+          var chart = new CanvasJS.Chart("chartContainer", {
+              data: [
+              {
+                  type: "column",
+                  dataPoints: [
+                  { x: 10, y: 10 },
+                  { x: 20, y: 15 },
+                  { x: 30, y: 25 },
+                  { x: 40, y: 30 },
+                  { x: 50, y: 28 }
+                  ]
+              }
+              ]
+          });
+ 
+          chart.render();
+      }
+
+
+      $('#sidebar').affix({
+  offset: {
+    top: 50
+  }
+});
+  </script>
 
   </body>
 </html>
