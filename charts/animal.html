@@ -3,7 +3,12 @@
 <head>
   <script type="text/javascript">
   window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer",
+    
+
+    
+
+
+    var chart99 = new CanvasJS.Chart("99",
     {
       
       title: {
@@ -40,13 +45,62 @@
       ]
     });
 
-    chart.render();
+    chart99.render();
+    chart99 = {};
+
+
+
+ var chart88 = new CanvasJS.Chart("88",
+    {
+      
+      title: {
+        text: "Blue Cart Recycling Complaints from Oct. 2013 to March 2014"
+           },
+
+      axisX:{
+        // title: "Types of Complaints",
+       labelFontSize: 15,
+        titleFontSize: 20,
+        labelAngle:-30,
+        labelFontColor: "brown"
+       },
+
+       axisY: {
+        title: "Number of Complaints",
+        interval: 250,
+        labelFontSize: 15,
+        titleFontSize: 20,
+        labelFontColor: "brown" 
+       },
+      data: [
+
+      {
+        dataPoints: [
+        { x: 10, y: 993, label: "Oct. 2013"},
+        { x: 20, y: 695,  label: "Nov. 2013" },
+        { x: 30, y: 1015,  label: "Dec. 2013"},
+        { x: 40, y: 1212,  label: "Jan. 2014"},
+        { x: 50, y: 913,  label: "Feb. 2014"},
+        { x: 50, y: 939,  label: "March 2014"}
+        ]
+      }
+      ]
+    });
+
+    chart88.render();
+    chart88 = {};
+
+
+
+
   }
   </script>
 
   <script type="text/javascript" src="canvasjs.min.js"></script></head>
   <body>
-   <div id="chartContainer" style="height: 500px; width: 75%;">
+   <div id="88" style="height: 500px; width: 75%;">
+   </div>
+   <div id="99" style="height: 500px; width: 75%;">
    </div>
  </body>
 </html>
