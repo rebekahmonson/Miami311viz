@@ -36,6 +36,7 @@ window.onload = function () {
       ]
     });
     chart.render();
+    chart={};
 
     var chart2 = new CanvasJS.Chart("chart2",
     {
@@ -75,4 +76,5 @@ window.onload = function () {
     });
 
     chart.render();
+    chart2={};
   }
