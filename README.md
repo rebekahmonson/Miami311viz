@@ -1,4 +1,8 @@
 Miami311viz
 ===========
 
-Vizualizing Miami Dade County 311 data
+Simple visualizations of top 311 service requests in Miami-Dade County.
+
+URL: http://rebekahmonson.github.io/Miami311viz/
+
+
