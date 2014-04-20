@@ -1,7 +1,7 @@
 
 //Bulky trash by ZIP
 
-var bulktrash = [
+var bulktrashdata = [
 //format=[lat,lng, "#"],
 [25.606583,	-80.34859, "33157: 1709 requests"],
 [25.734828,	-80.3583, "33165: 1439 requests"],
@@ -59,7 +59,7 @@ var bulktrash = [
 [25.887983,	-80.33284, "33016: 31 requests"]
 ];
 
-var greenwaste = [
+var greenwastedata = [
 //format=[lat,lng, "#"],
 [25.606583,	-80.34859, "33157: 1709 requests"],
 [25.734828,	-80.3583, "33165: 1439 requests"],
@@ -70,7 +70,7 @@ var greenwaste = [
 [25.94422,-80.2773, "33055: 1057 requests"]
 ];
 
-var recycling = [
+var recyclingdata = [
 //format=[lat,lng, "#"],
 [25.431506,	-80.51382, "33034: 46 requests"],
 [25.786634,	-80.36151, "33172: 41 requests"],
@@ -80,7 +80,7 @@ var recycling = [
 [25.887983,	-80.33284, "33016: 31 requests"]
 ];
 
-var dog = [
+var dogdata = [
 //format=[lat,lng, "#"],
 [25.559785,	-80.41664, "33170: 362 requests"],
 [25.938687,	-80.3182, "33015: 351 requests"],
@@ -89,7 +89,7 @@ var dog = [
 [25.76226, -80.30839, "33144: 322 requests"]
 ];
 
-var animal = [
+var animaldata = [
 [25.662292,	-80.40947, "33186: 881 requests"],
 [25.94267,-80.21276, "33169: 859 requests"],
 [25.66558,	-80.30688, "33156: 853 requests"],

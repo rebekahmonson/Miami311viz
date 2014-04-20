@@ -181,42 +181,14 @@
       });
 
     //group requests
-    var requests = L.layerGroup([bulktrash, greenwaste, recycling, dog, animal]);
+    //var requests = L.layerGroup([bulktrash, greenwat, aurora, golden]);
     
     //var map = L.map('map', {center: latlng, zoom: 10, layers: [baselayer]});
 
     var markers = L.markerClusterGroup();
     
-    for (var i = 0; i < bulktrash.length; i++) {
-      var a = bulktrash[i];
-      var title = a[2];
-      var marker = L.marker(new L.LatLng(a[0], a[1]), { title: title });
-      marker.bindPopup(title);
-      markers.addLayer(marker);
-    }
-    for (var i = 0; i < greenwaste.length; i++) {
-      var a = greenwaste[i];
-      var title = a[2];
-      var marker = L.marker(new L.LatLng(a[0], a[1]), { title: title });
-      marker.bindPopup(title);
-      markers.addLayer(marker);
-    }
-    for (var i = 0; i < recycling.length; i++) {
-      var a = recycling[i];
-      var title = a[2];
-      var marker = L.marker(new L.LatLng(a[0], a[1]), { title: title });
-      marker.bindPopup(title);
-      markers.addLayer(marker);
-    }
-    for (var i = 0; i < dog.length; i++) {
-      var a = dog[i];
-      var title = a[2];
-      var marker = L.marker(new L.LatLng(a[0], a[1]), { title: title });
-      marker.bindPopup(title);
-      markers.addLayer(marker);
-    }
-    for (var i = 0; i < animal.length; i++) {
-      var a = animal[i];
+    for (var i = 0; i < addressPoints.length; i++) {
+      var a = addressPoints[i];
       var title = a[2];
       var marker = L.marker(new L.LatLng(a[0], a[1]), { title: title });
       marker.bindPopup(title);
