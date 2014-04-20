@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
     <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 
+    <!--Charts-->
+
+    <script src="allcharts.js"></script>
+
     <!--Stamen -->
     <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
 
@@ -28,7 +32,6 @@
     <script src="leaflet.markercluster-src.js"></script>
     <!--data-->
     <script src="data/dummydata2.js"></script>
-
 
 
     <style type="text/css">
@@ -101,12 +104,15 @@
        <div class="page-header"> <div id="graph1">
         <h1>Bulk Trash</h1> </div>
 
-         <div id="chartContainer" style="height: 500px;"></div>
-      </div> 
+       <div id="chartContainer" style="height: 500px; width: 75%;">
+   </div>
 
        <div class="page-header"> <div id="graph2">
         <h1>Green Waste Cart Request</h1> </div>
       </div>
+
+        <div id="chartContainer2" style="height: 500px; width: 75%;">
+   </div>
 
        <div class="page-header"> <div id="graph3">
         <h1>Blue Cart Recycling</h1> </div>
@@ -165,35 +171,7 @@
 
   </script>
 
-  <!-- canvas-->
-  <script type="text/javascript">
-      window.onload = function () {
-          var chart = new CanvasJS.Chart("chartContainer", {
-              data: [
-              {
-                  type: "column",
-                  dataPoints: [
-                  { x: 10, y: 10 },
-                  { x: 20, y: 15 },
-                  { x: 30, y: 25 },
-                  { x: 40, y: 30 },
-                  { x: 50, y: 28 }
-                  ]
-              }
-              ]
-          });
- 
-          chart.render();
-      }
-
-
-      $('#sidebar').affix({
-  offset: {
-    top: 50
-  }
-});
-  </script>
-
+  
 
 
   </body>
