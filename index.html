@@ -45,6 +45,8 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
     <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 
+    <!--Stamen -->
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
 
     <!-- Marker Cluster-->
     <link rel="stylesheet" href="MarkerCluster.css" />
@@ -168,7 +170,10 @@
       }),
       latlng = L.latLng(25.7877, -80.2241);
 
-    var map = L.map('map', {center: latlng, zoom: 10, layers: [tiles]});
+      //pull in stamen layer
+      var baseLayer = new L.StamenTileLayer("toner");
+
+    var map = L.map('map', {center: latlng, zoom: 10, layers: [baselayer]});
 
     var markers = L.markerClusterGroup();
     
