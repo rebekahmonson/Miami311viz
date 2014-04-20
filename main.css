@@ -1,3 +1,11 @@
+body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+map{
+    height:300px;
+    }
+
 h1{
 	color: #575757;
 	font-size: 30px;

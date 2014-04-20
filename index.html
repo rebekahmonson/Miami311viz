@@ -34,23 +34,270 @@
     <!--data-->
     <script src="data/dummydata2.js"></script>
 
+    <script type="text/javascript">
+  window.onload = function () {
 
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
+    // Overall Chart
+    
+    var chart11 = new CanvasJS.Chart("11",
+    {
+      
+      title: {
+        // text: "Top 5 Complaints from Oct. 2013 to March 2014"
+           },
+
+      axisX:{
+        title: "Types of Complaints",
+       labelFontSize: 15,
+        titleFontSize: 20,
+        labelAngle:-30,
+        labelFontColor: "brown"
+       },
+
+       axisY: {
+        title: "Number of Complaints",
+        interval: 5000,
+        labelFontSize: 15,
+        titleFontSize: 20,
+        labelFontColor: "brown" 
+       },
+      data: [
+
+      {
+        dataPoints: [
+        { x: 10, y: 26666, label: "Bulk Trash"},
+        { x: 20, y: 16387,  label: "Green Waste Cart Request" },
+        { x: 30, y: 5767,  label: "Blue Cart Recycling"},
+        { x: 40, y: 5485,  label: "Abandoned Dog"},
+        { x: 50, y: 5166,  label: "Dead/Missing Animal"},
+        ]
       }
-      map{
-        height:300px;
+      ]
+    });
+
+    chart11.render();
+    chart11 = {};
+
+    // Bulk Trash Chart
+
+    var chart22 = new CanvasJS.Chart("22",
+    {
+      
+      title: {
+        // text: "Bulk Trash Complaints from Oct. 2013 to March 2014"
+           },
+
+      axisX:{
+        // title: "Types of Complaints",
+       labelFontSize: 15,
+        titleFontSize: 20,
+        labelAngle:-30,
+        labelFontColor: "brown"
+       },
+
+       axisY: {
+        title: "Number of Complaints",
+        interval: 1000,
+        labelFontSize: 15,
+        titleFontSize: 20,
+        labelFontColor: "brown" 
+       },
+      data: [
+
+      {
+        dataPoints: [
+        { x: 10, y: 5822, label: "Oct. 2013"},
+        { x: 20, y: 4160,  label: "Nov. 2013" },
+        { x: 30, y: 4406,  label: "Dec. 2013"},
+        { x: 40, y: 3814,  label: "Jan. 2014"},
+        { x: 50, y: 3868,  label: "Feb. 2014"},
+        { x: 50, y: 4596,  label: "March 2014"}
+        ]
       }
-    </style>
+      ]
+    });
+
+    chart22.render();
+    chart22 = {};
+
+    // Green Waste Chart
+
+    var chart33 = new CanvasJS.Chart("33",
+    {
+      
+      title: {
+        // text: "Green Waste Cart Requests from Oct. 2013 to March 2014"
+           },
+
+      axisX:{
+        // title: "Types of Complaints",
+       labelFontSize: 15,
+        titleFontSize: 20,
+        labelAngle:-30,
+        labelFontColor: "brown"
+       },
+
+       axisY: {
+        title: "Number of Complaints",
+        interval: 500,
+        labelFontSize: 15,
+        titleFontSize: 20,
+        labelFontColor: "brown" 
+       },
+      data: [
+
+      {
+        dataPoints: [
+        { x: 10, y: 2877, label: "Oct. 2013"},
+        { x: 20, y: 2324,  label: "Nov. 2013" },
+        { x: 30, y: 2690,  label: "Dec. 2013"},
+        { x: 40, y: 2907,  label: "Jan. 2014"},
+        { x: 50, y: 2725,  label: "Feb. 2014"},
+        { x: 50, y: 2864,  label: "March 2014"}
+        ]
+      }
+      ]
+    });
+
+    chart33.render();
+    chart33 = {};
+
+    // Blue Cart chart
+
+    var chart44 = new CanvasJS.Chart("44",
+    {
+      
+      title: {
+        // text: "Blue Cart Recycling Complaints from Oct. 2013 to March 2014"
+           },
+
+      axisX:{
+        // title: "Types of Complaints",
+       labelFontSize: 15,
+        titleFontSize: 20,
+        labelAngle:-30,
+        labelFontColor: "brown"
+       },
+
+       axisY: {
+        title: "Number of Complaints",
+        interval: 250,
+        labelFontSize: 15,
+        titleFontSize: 20,
+        labelFontColor: "brown" 
+       },
+      data: [
+
+      {
+        dataPoints: [
+        { x: 10, y: 993, label: "Oct. 2013"},
+        { x: 20, y: 695,  label: "Nov. 2013" },
+        { x: 30, y: 1015,  label: "Dec. 2013"},
+        { x: 40, y: 1212,  label: "Jan. 2014"},
+        { x: 50, y: 913,  label: "Feb. 2014"},
+        { x: 50, y: 939,  label: "March 2014"}
+        ]
+      }
+      ]
+    });
+
+    chart44.render();
+    chart44 = {};
+
+    // Dog Chart
+
+    var chart55 = new CanvasJS.Chart("55",
+    {
+      
+      title: {
+        // text: "Abandoned Dog Complaints from Oct. 2013 to March 2014"
+           },
+
+      axisX:{
+        // title: "Types of Complaints",
+       labelFontSize: 15,
+        titleFontSize: 20,
+        labelAngle:-30,
+        labelFontColor: "brown"
+       },
+
+       axisY: {
+        title: "Number of Complaints",
+        interval: 200,
+        labelFontSize: 15,
+        titleFontSize: 20,
+        labelFontColor: "brown" 
+       },
+      data: [
+
+      {
+        dataPoints: [
+        { x: 10, y: 1106, label: "Oct. 2013"},
+        { x: 20, y: 826,  label: "Nov. 2013" },
+        { x: 30, y: 907,  label: "Dec. 2013"},
+        { x: 40, y: 1032,  label: "Jan. 2014"},
+        { x: 50, y: 777,  label: "Feb. 2014"},
+        { x: 50, y: 837,  label: "March 2014"}
+        ]
+      }
+      ]
+    });
+
+    chart55.render();
+    chart55 = {};
+
+    // Animal Chart
+
+    var chart66 = new CanvasJS.Chart("66",
+    {
+      
+      title: {
+        // text: "Dead/Missing Animal Complaints from Oct. 2013 to March 2014"
+           },
+
+      axisX:{
+        // title: "Types of Complaints",
+       labelFontSize: 15,
+        titleFontSize: 20,
+        labelAngle:-30,
+        labelFontColor: "brown"
+       },
+
+       axisY: {
+        title: "Number of Complaints",
+        interval: 200,
+        labelFontSize: 15,
+        titleFontSize: 20,
+        labelFontColor: "brown" 
+       },
+      data: [
+
+      {
+        dataPoints: [
+        { x: 10, y: 432, label: "Oct. 2013"},
+        { x: 20, y: 696,  label: "Nov. 2013" },
+        { x: 30, y: 958,  label: "Dec. 2013"},
+        { x: 40, y: 1068,  label: "Jan. 2014"},
+        { x: 50, y: 977,  label: "Feb. 2014"},
+        { x: 50, y: 1035,  label: "March 2014"}
+        ]
+      }
+      ]
+    });
+
+    chart66.render();
+    chart66 = {};
+  
+
+  } //Close window onload
+  </script>
 
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
-
+`
     <!-- Fav and touch icons -->
     
   </head>
@@ -96,38 +343,96 @@
     <div class="container theme-showcase" role="main">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
+<<<<<<< HEAD
+=======
+     <div>
+      <h3>311 is a simple hotline operated by Miami Dade County that allows citizens to report civic disturbances and complaints, such as stray dogs, illegal dumping, and down street lights. We analyzed all complaints phoned into the hotline from Oct. 2013 to March 2013 to help better understand exactly what kind of problems plague this tourist hotspot.</h3>
+
+    </div>
+>>>>>>> FETCH_HEAD
 
     <!-- MAP -->
     <div class="row">
-      <h1>Service requests by ZIP code</h1> 
+<<<<<<< HEAD
+      <h1>Top 5 Complaints from Oct. 2013 to March 2014</h1> 
+       </div>
+
+     <div id="11" style="height: 400px; width:45%;"></div>
+=======
+      <h1>311 service requests by ZIP code</h1> 
       <div id="map" style="width: 100%; height: 300px"></div>
+<<<<<<< HEAD
 
     </div>
       
+=======
+      </div>
+>>>>>>> 222ac14a45c092ee48f16a0eb29f4a7e5886e072
 
-       <div class="page-header"> <div id="graph1">
-        <h1>Bulk Trash</h1> </div>
+     <div class="row">
+      <h1>Number of Complaints by Zipcode</h1> 
+       </div>
 
+     <div id="map" style="width: 100%; height: 300px"></div>
+     
+
+
+       <div class="page-header"> 
+        <div id="graph1">
+        <h1>Complaint #1 - Bulk Trash</h1>
+
+        <div id="22" style="height: 400px; width:45%;"></div> 
+        </div>
+
+<<<<<<< HEAD
+<!-- <<<<<<< HEAD
+         
+=======
+         <div id="22" style="height: 500px; width:45%;"></div>
+>>>>>>> 222ac14a45c092ee48f16a0eb29f4a7e5886e072
+      </div> 
+>>>>>>> FETCH_HEAD
+
+      <div id="chart1" style="height: 500px;"></div>
+<<<<<<< HEAD
+>>>>>>> d47be1e83f1c973d0cebe93947427c6c4d75d704
+ -->
+=======
+
+<<<<<<< HEAD
        <div id="chartContainer" style="height: 500px; width: 75%;">
     </div>
+=======
+>>>>>>> FETCH_HEAD
 
-       <div class="page-header"> <div id="graph2">
-        <h1>Green Waste Cart Request</h1> </div>
+>>>>>>> 222ac14a45c092ee48f16a0eb29f4a7e5886e072
+       <div class="page-header"> 
+        <div id="graph2">
+        <h1>Complaint #2 - Green Waste Cart Request</h1> 
+
+        <div id="33" style="height: 400px; width:45%;"></div>
+
+        </div>
       </div>
 
-        <div id="chartContainer2" style="height: 500px; width: 75%;">
-   </div>
+        <!-- <div id="chart2" style="height: 500px;">
+   </div> -->
 
        <div class="page-header"> <div id="graph3">
-        <h1>Blue Cart Recycling</h1> </div>
+        <h1>Complaint #3 - Blue Cart Recycling</h1> </div>
+        <div id="44" style="height: 400px; width:45%;"></div>
+
       </div>  
 
         <div class="page-header"> <div id="graph4">
-        <h1>Abandoned Dog</h1> </div>
+        <h1>Complaint #4 - Abandoned Dog</h1> </div>
+        <div id="55" style="height: 400px; width:45%;"></div>
       </div>  
  
       <div class="page-header"> <div id="graph5">
-        <h1>Dead / Missing Animal</h1> </div>
+        <h1>Complaint #5 - Dead / Missing Animal</h1> </div>
+
+        <div id="66" style="height: 400px; width:45%;"></div>
       </div> 
   
      
@@ -175,6 +480,22 @@
 
   </script>
 
+<<<<<<< HEAD
+
+      $('#sidebar').affix({
+  offset: {
+    top: 50
+  }
+});
+  </script>
+
+=======
   
+<<<<<<< HEAD
+=======
+>>>>>>> d47be1e83f1c973d0cebe93947427c6c4d75d704
+
+
+>>>>>>> FETCH_HEAD
   </body>
 </html>
