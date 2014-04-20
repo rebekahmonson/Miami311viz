@@ -1,5 +1,5 @@
 window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer",
+    var chart = new CanvasJS.Chart("chart1",
     {
       
       title: {
@@ -36,7 +36,7 @@ window.onload = function () {
       ]
     });
 
-    var chart2 = new CanvasJS.Chart("chartContainer2",
+    var chart2 = new CanvasJS.Chart("chart2",
     {
       
       title: {
