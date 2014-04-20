@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      
+      title: {
+        text: "Top 5 Complaints from Oct. 2013 to March 2014"
+           },
+
+      axisX:{
+        title: "Types of Complaints",
+       labelFontSize: 15,
+        titleFontSize: 20,
+        labelAngle:-30,
+        labelFontColor: "brown"
+       },
+
+       axisY: {
+        title: "Number of Complaints",
+        interval: 5000,
+        labelFontSize: 15,
+        titleFontSize: 20,
+        labelFontColor: "brown" 
+       },
+      data: [
+
+      {
+        dataPoints: [
+        { x: 10, y: 26666, label: "Bulk Trash"},
+        { x: 20, y: 16387,  label: "GReen Waste Cart Request" },
+        { x: 30, y: 5767,  label: "Blue Cart Recycling"},
+        { x: 40, y: 5485,  label: "Abandoned Dog"},
+        { x: 50, y: 5166,  label: "Dead/Missing Animal"},
+        ]
+      }
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+
+  <script type="text/javascript" src="canvasjs.min.js"></script></head>
+  <body>
+   <div id="chartContainer" style="height: 500px; width: 75%;">
+   </div>
+ </body>
+</html>
