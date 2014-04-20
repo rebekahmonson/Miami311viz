@@ -1,5 +1,5 @@
 
-//Bulky trash by ZIP
+//Bulky trash by ZIP restore
 
 var addressPoints = [
 //format=[lat,lng, "#"],
