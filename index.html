@@ -164,16 +164,23 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
-    var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
-      }),
-      latlng = L.latLng(25.7877, -80.2241);
+    // var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    //     maxZoom: 18,
+    //     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
+    //   }),
+    // latlng = L.latLng(25.7877, -80.2241);
 
       //pull in stamen layer
       var baseLayer = new L.StamenTileLayer("toner");
 
-    var map = L.map('map', {center: latlng, zoom: 10, layers: [baselayer]});
+      //create map
+      var map = L.map('map', {
+        center: new L.LatLng(25.7877, -80.2241), 
+        zoom: 11,
+        layers: [baseLayer]
+      });
+    
+    //var map = L.map('map', {center: latlng, zoom: 10, layers: [baselayer]});
 
     var markers = L.markerClusterGroup();
     
