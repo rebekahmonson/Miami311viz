@@ -13,11 +13,12 @@ h1{
 	height: 258px;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: -6px;
+	margin-top: 10px;
  }
 
  body { 
- 	padding-top: 70px; }
+ 	padding-top: 70px;
+ }
 
 
  .navbar navbar-inverse navbar-fixed-top{
