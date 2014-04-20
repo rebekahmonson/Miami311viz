@@ -173,7 +173,7 @@
     var dog = L.markerClusterGroup();
     for (var i = 0; i < dogdata.length; i++) {
       var d = dogdata[i];
-      var title = c[2];
+      var title = d[2];
       var marker = L.marker(new L.LatLng(d[0], d[1]), { title: title });
       marker.bindPopup(title);
       markers.addLayer(dog);
@@ -188,7 +188,7 @@
     }
 
     //Layer group requests
-    var requests = L.layerGroup([bulktrash, greenwaste, recycling, dog, animal]);
+    var requests = new L.layerGroup([bulktrash, greenwaste, recycling, dog, animal]);
 
     //create map
       var map = L.map('map', {
@@ -196,6 +196,12 @@
         zoom: 11,
         layers: [baseLayer, requests]
       });
+
+    var overlays = {
+      "Service requests": requests
+    };
+
+
 
   </script>
 
